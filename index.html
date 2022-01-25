@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lato:wght@100;300&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Kenzie Food - E-commerce</title>
+  </head>
+  <body>
+    <header>
+      <section class="logoPesquisa">
+        <!-- logo e título-->
+        <div class="logoTitulo">
+        <!-- Esconder figcaption -->
+        <figure>
+          <img src="./src/img/logo/logo.png" alt="Logo Kenzie Food" />
+          <figcaption>Logo Kenzie Food</figcaption>
+        </figure>
+        <h1>Kenzie <span>Food</span></h1>
+        </div>
+
+        <!-- campo de pesquisa -->
+        <div class="containerPesquisarPorProduto">
+          <!-- Esconder o label -->
+          <label for="pesquisarProduto">Pesquisar por produto</label>
+          <input
+            type="text"
+            name="pesquisarProduto" class="inputPesquisarProdutos"
+            id="pesquisarProduto"
+            placeholder="Pesquisar por produto"
+          />
+          <button class="botãoPesquisarProdutos"></button>
+        </section>
+        </div>
+        
+      <!-- nav com filtros -->
+      <nav id="filtros" class="filtros">
+        <!-- 4 botões -->
+        <button class="botaoTodos">Todos</button>
+        <button class="botaoPanificadora">
+          <img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão"> Panificadora
+        </button>
+        <button class="botaoFrutas">
+          <img src="./src/img/filtros/Icon_fruits.png" alt="Ícone de frutas">Frutas
+        </button>
+        <button class="botaoBebidas">
+          <img src="./src/img/filtros/Icon_glass of wine.png" alt="Ícone de uma taça de vinho">Bebidas
+        </button>
+      </nav>
+    </header>
+    <main class="vitrine">
+      <!-- section para os cards -->
+      <section class="cardGrupo__section">
+        <!-- uma ul com 6 li's -->
+        <ul class="cardGrupo">
+          <!-- nas li's uma foto, uma etiqueta com o tipo, um titulo do card, uma descrição, o preço e um botão para adicionar ao carrinho(que pode ser um link) -->
+          <li class="card cardGrupo__card" id='1'>
+            <figure class="card__imagem">
+              <img
+                src="./src/img/cards/panqueca.png"
+                alt="Foto de panqueca"
+              />
+              <figcaption>Panqueca de banana com aveia </figcaption>
+            </figure>
+          </div>
+            <p class="card__marcador">
+              <img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão"> Panificadora
+            </p>
+            <p class="card__nome">Panqueca de banana com aveia </p>
+            <p class="card__descricaoTexto">Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito, se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
+            <p class="card__preco">R$ 20.00</p>
+            <button
+              class="botao__carrinhoCompras"
+              name="botão para adicionar produtos ao carrinho"
+              type="button"
+            >
+            <img src="./src/img/botaoCarrinho/Button Circle.png" alt="Adicionar ao Carrinho">
+            </button>
+        </li>
+        <li class="card cardGrupo__card" id='2'>
+          <figure class="card__imagem">
+              <img
+                src="./src/img/cards/mousse.png"
+                alt="Foto Mousse de Morango"
+              />
+              <figcaption>Foto Mousse de Morango</figcaption>
+            </figure>
+          </div>
+            <p class="card__marcador marcador">
+              <img src="./src/img/filtros/Icon_fruits.png" alt="Ícone de frutas">Frutas
+            </p>
+            <p class="card__nome">Mousse de morango com a fruta</p>
+            <p class="card__descricaoTexto">Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva apenas 5 ingredientes; confira como fazer a receita</p>
+            <p class="card__preco">R$ 27.50</p>
+            <button
+              class="botao__carrinhoCompras"
+              name="botão para adicionar produtos ao carrinho"
+              type="button"
+            >
+            <img src="./src/img/botaoCarrinho/Button Circle.png" alt="Adicionar ao Carrinho">
+            </button>
+        </li>
+        <li class="card cardGrupo__card" id="3">
+          <figure class="card__imagem">
+              <img
+                src="./src/img/cards/pastel.png"
+                alt="Pastel de verduras"
+              />
+              <figcaption>Pastel de verduras</figcaption>
+            </figure>
+          </div>
+            <p class="card__marcador">
+              <img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão"> Panificadora
+            </p>
+            <p class="card__nome">Pastel de verduras vegano</p>
+            <p class="card__descricaoTexto">Todos nós fervemos vegetais, salteamos ou consumimos crus. Mas que tal comer vegetais como se fossem um bolo?</p>
+            <p class="card__preco">R$ 20.00</p>
+            <button
+              class="botao__carrinhoCompras"
+              name="botão para adicionar produtos ao carrinho"
+              type="button"
+            >
+            <img src="./src/img/botaoCarrinho/Button Circle.png" alt="Adicionar ao Carrinho">
+            </button>
+        </li>
+        <li class="card cardGrupo__card" id="4">
+          <figure class="card__imagem">
+              <img
+                src="./src/img/cards/pizza.png"
+                alt="Pizza vegetariana"
+              />
+              <figcaption>Pizza vegetariana</figcaption>
+            </figure>
+          </div>
+            <p class="card__marcador">
+              <img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão"> Panificadora
+            </p>
+            <p class="card__nome">Pizza vegetariana de palmito</p>
+            <p class="card__descricaoTexto">Pizza vegetariana recheada com Palmito e ervas finas.</p>
+            <p class="card__preco">R$ 20.00</p>
+            <button
+              class="botao__carrinhoCompras"
+              name="botão para adicionar produtos ao carrinho"
+              type="button"
+            >
+            <img src="./src/img/botaoCarrinho/Button Circle.png" alt="Adicionar ao Carrinho">
+            </button>
+        </li>
+        <li class="card cardGrupo__card" id="5">
+          <figure class="card__imagem">
+              <img
+                src="./src/img/cards/vinho.png"
+                alt="Foto de vinho e taça"
+              />
+              <figcaption>Foto de vinho e taça</figcaption>
+            </figure>
+          </div>
+            <p class="card__marcador">
+              <img src="./src/img/filtros/Icon_glass of wine.png" alt="Ícone de uma taça de vinho">Bebidas
+            </p>
+            <p class="card__nome">Vinho suave</p>
+            <p class="card__descricaoTexto">O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
+            <p class="card__preco">R$ 20.00</p>
+            <button
+              class="botao__carrinhoCompras"
+              name="botão para adicionar produtos ao carrinho"
+              type="button"
+            >
+            <img src="./src/img/botaoCarrinho/Button Circle.png" alt="Adicionar ao Carrinho">
+            </button>
+        </li>
+        <li class="card cardGrupo__card" id="6">
+          <figure class="card__imagem">
+              <img
+                src="./src/img/cards/fruta.png"
+                alt="Foto de laranjas"
+              />
+              <figcaption>Foto de laranjas</figcaption>
+            </figure>
+          </div>
+            <p class="card__marcador">
+              <img src="./src/img/filtros/Icon_fruits.png" alt="Ícone de frutas">Frutas
+            </p>
+            <p class="card__nome">Laranja Pera Fresca Kenzie 5kg</p>
+            <p class="card__descricaoTexto">Bastante popular no Brasil, a laranja é uma das maiores representantes das frutas cítricas. Seu sabor costuma ser doce ou levemente ácido</p>
+            <p class="card__preco">R$ 20.00</p>
+            <button
+              class="botao__carrinhoCompras"
+              name="botão para adicionar produtos ao carrinho"
+              type="button"
+            >
+            <img src="./src/img/botaoCarrinho/Button Circle.png" alt="Adicionar ao Carrinho">
+            </button>
+        </li>
+        </ul>
+      </section>
+
+    <!-- section para o carrinho -->
+    <section class="carrinhoCompras">
+      <!-- simbolo do carrinho + nome -->
+      <p class="carrinhoTitulo">
+        <img src="./src/img/logoCarrinho/carrinho.png" alt="Seção do carrinho"> Carrinho
+      </p>
+      <div class="carrinhoCorpo">
+    <!-- card diferenciado com foto, titulo, etiqueta, preço e o botão de remover -->
+    <ul class="cardGrupo__Carrinho">
+      <li class="card cardGrupo__card" id='1'>
+        <figure class="card__imagem">
+          <img
+            src="./src/img/cards/panqueca.png"
+            alt="Foto de panqueca"
+          />
+          <figcaption>Panqueca de banana com aveia </figcaption>
+        </figure>
+      </div>
+        <p class="card__nome">Panqueca de banana com aveia </p>
+        <p class="card__marcador"> Panificadora</p>
+        <p class="card__preco">R$ 20.00</p>
+        <button
+          class="botao__carrinhoCompras"
+          name="botão para remover do carrinho"
+          type="button"
+        >
+<img src="./src/img/removerProduto/botaoRemover.png" alt="Remover do Carrinho">
+        </button>
+    </li>
+
+    <li class="card cardGrupo__card" id='2'>
+      <figure class="card__imagem">
+          <img
+            src="./src/img/cards/mousse.png"
+            alt="Foto Mousse de Morango"
+          />
+          <figcaption>Foto Mousse de Morango</figcaption>
+        </figure>
+      </div>
+
+        <p class="card__nome">Mousse de morango com a fruta</p>
+        <p class="card__marcador marcador">Frutas</p>
+        <p class="card__preco">R$ 27.50</p>
+        <button
+          class="botao__carrinhoCompras"
+          name="botão para remover do carrinho"
+          type="button"
+        >
+        <img src="./src/img/removerProduto/botaoRemover.png" alt="Remover do Carrinho">
+        </button>
+    </li>
+
+    <li class="card cardGrupo__card" id="4">
+      <figure class="card__imagem">
+          <img
+            src="./src/img/cards/pizza.png"
+            alt="Pizza vegetariana"
+          />
+          <figcaption>Pizza vegetariana</figcaption>
+        </figure>
+      </div>
+        <p class="card__nome">Pizza vegetariana de palmito</p>
+        <p class="card__marcador">Panificadora</p>
+        <p class="card__preco">R$ 20.00</p>
+        <button
+          class="botao__carrinhoCompras"
+          name="botão para remover do carrinho"
+          type="button"
+        >
+        <img src="./src/img/removerProduto/botaoRemover.png" alt="Remover do Carrinho">
+        </button>
+    </li>
+
+    <li class="card cardGrupo__card" id="6">
+      <figure class="card__imagem">
+          <img
+            src="./src/img/cards/fruta.png"
+            alt="Foto de laranjas"
+          />
+          <figcaption>Foto de laranjas</figcaption>
+        </figure>
+      </div>
+        <p class="card__nome">Laranja Pera Fresca Kenzie 5kg</p>
+        <p class="card__marcador">Frutas</p>
+        <p class="card__preco">R$ 20.00</p>
+        <button
+          class="botao__carrinhoCompras"
+          name="botão para remover do carrinho"
+          type="button"
+        >
+        <img src="./src/img/removerProduto/botaoRemover.png" alt="Remover do Carrinho">
+        </button>
+    </li>
+    </ul>
+  </div>
+
+  <!-- quantidade e total do valor -->
+  <div class="carrinhoFooter">
+    <p class="quantidadeProdutos">Quantidade</p>
+    <p class="valorQuantidadeProdutos">5</p>
+    <p class="totalProdutos">Total</p>
+    <p class="precoTotalProdutos">R$ 85.00</p>
+  </div>
+</section>
+
+    </main>
+
+  </body>
+</html>
