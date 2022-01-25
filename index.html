@@ -29,7 +29,7 @@
           <!-- Esconder o label -->
           <label for="pesquisarProduto">Pesquisar por produto</label>
           <input
-            type="text"
+            type="text" onkeyup="filtrarPorNomeBuscado()"
             name="pesquisarProduto" class="inputPesquisarProdutos"
             id="pesquisarProduto"
             placeholder="Pesquisar por produto"
@@ -306,6 +306,6 @@
 </section>
 
     </main>
-
+<script type="module" src="./src/js/app.js"></script>
   </body>
 </html>
