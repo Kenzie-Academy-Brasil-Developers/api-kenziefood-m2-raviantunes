@@ -1,5 +1,3 @@
-const db = ReadDB.all()
-
 class NewProductModel {
 	constructor ({nome, preco, categoria, descricao, imagem}) {
 		this.id = this.getMaxId() + 1
