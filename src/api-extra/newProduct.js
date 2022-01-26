@@ -1,13 +1,14 @@
 class NewProductModel {
 	constructor ({nome, preco, categoria, descricao, imagem}) {
-		this.id = this.getMaxId() + 1
-		this._nome = nome
-		this._preco = preco.toFixed(2)
+		this.id 		= this.getMaxId() + 1
+		this._nome 		= nome
+		this._preco 	= preco.toFixed(2)
 		this._categoria = categoria
 		this._descricao = descricao
-		this._imagem = imagem
-		this.createdAt = this.newDate()
-		this.updatedAt = this.upDate()
+		this._imagem 	= imagem
+		this.createdAt 	= this.newDate()
+		this.updatedAt 	= this.upDate()
+		this.imgCategoria = this.pegarImgCategoria()
 	}
 
 	getMaxId(){
@@ -28,6 +29,18 @@ class NewProductModel {
 	upDate() {
 		let upDate = new Date()
 		return upDate.toUTCString()
+	}
+
+	pegarImgCategoria() {
+		if(this.categoria === "Panificadora"){
+			this.imgCategoria = "../img/filtros/Icon_bread.png"
+		}
+		else if(this.categoria === "Frutas"){
+			this.imgCategoria = "../img/filtros/Icon_fruits.png"
+		}
+		else if(this.categoria === "Bebidas"){
+			this.imgCategoria = "../img/filtros/Icon_glass of wine.png"
+		}
 	}
 
 	get nome(){
