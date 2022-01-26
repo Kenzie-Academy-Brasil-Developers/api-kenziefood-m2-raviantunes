@@ -1,4 +1,6 @@
 import { filter } from './Filter.js';
+import { precoCarrinho } from './PrecoCarrinho.js';
+import { quantidadeProdutos } from './QuantidadeProdutos.js';
 
 // AGUARDANDO ALTERAÇÕES NAS CLASSES DO CSS PARA MEXER
 // para executar o método, adicionar um event listener no botão responsável pelo filtro
