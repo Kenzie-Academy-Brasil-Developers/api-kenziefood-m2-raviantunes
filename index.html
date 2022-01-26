@@ -1,13 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<section id="teste"></section>
-	<script type="module" src="src/api-base/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lato:wght@100;300&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0082ba51d5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Kenzie Food - E-commerce</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+        <!-- logo e título-->
+        <div class="cabecalho__logo">
+        <!-- Esconder figcaption -->
+          <figure class="cabecalho__logo--imagem">
+            <img src="./src/img/logo/logo.png" alt="Logo Kenzie Food" />
+            <figcaption>Logo Kenzie Food</figcaption>
+          </figure>
+          <h1 class="cabecalho__logo--titulo">Kenzie <span class="cabecalho__logo--titulo-span">Food</span></h1>
+        </div>
+
+        <!-- campo de pesquisa -->
+        <div class="pesquisa">
+          <input
+            type="text"
+            name="pesquisarProduto" class="pesquisa__input"
+            id="pesquisarProduto"
+            placeholder="Pesquisar por produto"
+          />
+          <button class="pesquisa__button"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <!-- nav com filtros -->
+        <nav id="filtros" class="filtros">
+          <!-- 4 botões -->
+          <button class="filtros__button--todos">Todos</button>
+          <button class="filtros__button--panificadora">
+            <img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão"> Panificadora
+          </button>
+          <button class="filtros__button--frutas">
+            <img src="./src/img/filtros/Icon_fruits.png" alt="Ícone de frutas">Frutas
+          </button>
+          <button class="filtros__button--bebidas">
+            <img src="./src/img/filtros/Icon_glass of wine.png" alt="Ícone de uma taça de vinho">Bebidas
+          </button>
+        </nav>
+    </header>
+
+    <main>
+      <!-- section para os cards -->
+      <section class="vitrine">
+        <!-- uma ul com 6 li's -->
+        <ul class="vitrine__lista">
+          <!-- nas li's uma foto, uma etiqueta com o tipo, um titulo do card, uma descrição, o preço e um botão para adicionar ao carrinho(que pode ser um link) -->
+          <li class="vitrine__item" id='1'>
+            <figure class="item__imagem--panqueca">
+              <img src="./src/img/cards/panqueca.png" alt="Foto de panqueca"/>
+              <figcaption>Panqueca de banana com aveia </figcaption>
+            </figure>
+          
+            <span class="item__categoria--panificadora"><img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão"> Panificadora</span>
+            <h2 class="item__nome">Panqueca de banana com aveia</h2>
+            <p class="item__info">Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito, se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
+            <span class="item__preco">R$ 20,00</span>
+            <button class="item__botao"  name="botão para adicionar produtos ao carrinho" type="button"><i class="fas fa-cart-plus"></i></button>
+          </li>
+
+          <li class="vitrine__item"  id='2'>
+            <figure class="item__imagem">
+                <img src="./src/img/cards/mousse.png" alt="Foto Mousse de Morango"/>
+                <figcaption>Foto Mousse de Morango</figcaption>
+              </figure>
+            
+              <span class="item__categoria--frutas">
+                <img src="./src/img/filtros/Icon_fruits.png" alt="Ícone de frutas"> Frutas
+              </span>
+
+              <h2 class="item__nome">Mousse de morango com a fruta</h2>
+              <p class="item__info">Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva apenas 5 ingredientes; confira como fazer a receita</p>
+              <span class="item__preco">R$ 27,50</span>
+              <button class="item__botao" name="botão para adicionar produtos ao carrinho" type="button"><i class="fas fa-cart-plus"></i></button>
+          </li>
+
+          <li class="vitrine__item" id="3">
+            <figure class="item__imagem">
+                <img src="./src/img/cards/pastel.png"  alt="Pastel de verduras"/>
+                <figcaption>Pastel de verduras</figcaption>
+              </figure>
+           
+              <span class="item__categoria--panificadora">
+                <img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão"> Panificadora
+              </span>
+
+              <h2 class="item__nome">Pastel de verduras vegano</h2>
+              <p class="item__info">Todos nós fervemos vegetais, salteamos ou consumimos crus. Mas que tal comer vegetais como se fossem um bolo?</p>
+              <span class="item__preco">R$ 20,00</span>
+              <button class="item__botao" name="botão para adicionar produtos ao carrinho" type="button"><i class="fas fa-cart-plus"></i></button>
+          </li>
+
+          <li class="vitrine__item" id="4">
+            <figure class="item__imagem">
+                <img src="./src/img/cards/pizza.png" alt="Pizza vegetariana"/>
+                <figcaption>Pizza vegetariana</figcaption>
+              </figure>
+            
+              <span class="item__categoria--panificadora">
+                <img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão"> Panificadora
+              </span>
+
+              <h2 class="item__nome">Pizza vegetariana de palmito</h2>
+              <p class="item__info">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.</p>
+              <span class="item__preco">R$ 20,00</span>
+              <button class="item__botao" name="botão para adicionar produtos ao carrinho" type="button"><i class="fas fa-cart-plus"></i></button>
+          </li>
+
+          <li class="vitrine__item" id="5">
+            <figure class="item__imagem">
+                <img src="./src/img/cards/vinho.png" alt="Foto de vinho e taça">
+                <figcaption>Foto de vinho e taça</figcaption>
+              </figure>
+           
+              <span class="item__categoria--bebidas">
+                <img src="./src/img/filtros/Icon_glass of wine.png" alt="Ícone de uma taça de vinho"> Bebidas
+              </span>
+
+              <h2 class="item__nome">Vinho suave</h2>
+              <p class="item__info">O vinho é rico em compostos nutricionais muito importantes para a nossa saúde: os polifenóis. Também auxiliam no sistema imunológico</p>
+              <span class="item__preco">R$ 20,00</span>
+              <button class="item__botao" name="botão para adicionar produtos ao carrinho" type="button"><i class="fas fa-cart-plus"></i></button>
+          </li>
+
+          <li class="vitrine__item" id="6">
+            <figure class="item__imagem">
+                <img  src="./src/img/cards/fruta.png"  alt="Foto de laranjas"/>
+                <figcaption>Foto de laranjas</figcaption>
+              </figure>
+            
+              <span class="item__categoria--frutas">
+                <img src="./src/img/filtros/Icon_fruits.png" alt="Ícone de frutas"> Frutas
+              </span>
+
+              <h2 class="item__nome">Laranja Pera Fresca Kenzie 5kg</h2>
+              <p class="item__info">Bastante popular no Brasil, a laranja é uma das maiores representantes das frutas cítricas. Seu sabor costuma ser doce ou levemente ácido</p>
+              <span class="item__preco">R$ 20,00</span>
+              <button class="item__botao" name="botão para adicionar produtos ao carrinho" type="button"><i class="fas fa-cart-plus"></i></button>
+          </li>
+        </ul>
+      </section>
+
+    <!-- section para o carrinho -->
+      <section class="carrinho">
+        <!-- simbolo do carrinho + nome -->
+        <div class="carrinho__titulo">
+          <p class="carrinhoTitulo"><i class="fas fa-cart-arrow-down"></i> Carrinho</p>
+        </div>
+        
+        <!-- DIV INICIAL DO CARRINHO VAZIO -->
+        <div class="carrinho__corpo--vazio">
+          <img src="./src/img/logoCarrinho/shopping-bag.png" alt="Bolsa de compra">
+          <h2>Ops!</h2>
+          <p>Por enquanto não temos produtos no carrinho</p>
+        </div>
+
+        <!-- DIV COM PRODUTOS NO CARRINHO -->
+        <!-- <div class="carrinho__corpo--preenchido">
+          
+          <ul class="carrinhoLista">
+
+            <li class="carrinhoLista__item" id='1'>
+              <figure class="carrinhoLista__imagem">
+                <img  src="./src/img/cards/panqueca.png"  alt="Foto de panqueca"/>
+                <figcaption>Panqueca de banana com aveia </figcaption>
+              </figure>
+              
+              <div class="carrinhoLista__infos">
+                <h2 class="carrinhoLista__nome">Panqueca de banana com aveia </h2>
+                <span class="carrinhoLista__categoria"> Panificadora</span>
+                <span class="carrinhoLista__preco">R$ 20,00</span>
+              </div>
+                
+              <button class="carrinhoLista__botao" name="botão para remover do carrinho" type="button"><i class="fas fa-trash"></i></button>
+           </li>
+
+            <li class="carrinhoLista__item" id='2'>
+              <figure class="carrinhoLista__imagem">
+                  <img  src="./src/img/cards/mousse.png"  alt="Foto Mousse de Morango"/>
+                  <figcaption>Foto Mousse de Morango</figcaption>
+                </figure>
+
+                <div class="carrinhoLista__infos">
+                  <h2 class="carrinhoLista__nome">Mousse de morango com a fruta</h2>
+                  <span class="carrinhoLista__categoria">Frutas</span>
+                  <span class="carrinhoLista__preco">R$ 27,50</span>
+                </div>
+                
+                <button class="carrinhoLista__botao" name="botão para remover do carrinho" type="button"><i class="fas fa-trash"></i></button>
+            </li>
+
+            <li class="carrinhoLista__item" id="4">
+              <figure class="carrinhoLista__imagem">
+                  <img src="./src/img/cards/pizza.png" alt="Pizza vegetariana"/>
+                  <figcaption>Pizza vegetariana</figcaption>
+                </figure>
+              
+                <div class="carrinhoLista__infos">
+                  <h2 class="carrinhoLista__nome">Pizza vegetariana de palmito</h2>
+                  <span class="carrinhoLista__categoria">Panificadora</span>
+                  <span class="carrinhoLista__preco">R$ 20,00</span>
+                </div>
+                
+                <button class="carrinhoLista__botao" name="botão para remover do carrinho" type="button"><i class="fas fa-trash"></i></button>
+            </li>
+
+            <li class="carrinhoLista__item" id="6">
+              <figure class="carrinhoLista__imagem">
+                  <img src="./src/img/cards/fruta.png" alt="Foto de laranjas"/>
+                  <figcaption>Foto de laranjas</figcaption>
+                </figure>
+              
+                <div class="carrinhoLista__infos">
+                  <h2 class="carrinhoLista__nome">Laranja Pera Fresca Kenzie 5kg</h2>
+                  <span class="carrinhoLista__categoria">Frutas</span>
+                  <span class="carrinhoLista__preco">R$ 20,00</span>
+                </div>
+                
+                <button class="carrinhoLista__botao" name="botão para remover do carrinho" type="button"><i class="fas fa-trash"></i></button>
+            </li>
+
+          </ul>
+          
+        </div> -->
+
+      </section> 
+
+      <!-- SEÇÃO QUE DEVE APARECER APENAS QUANDO UM PRODUTO FOR ADICIONADO AO CARRINHO -->
+      <!-- <section class="quanti-Preco">
+         
+         <div class="quantidade">
+          <span class="quantidade__texto">Quantidade</span>
+          <span class="quantidade__valor">5</span>
+         </div>
+          
+         <div class="preco">
+          <span class="preco__texto">Total</span>
+          <span class="preco__valor">R$ 85,00</span>
+         </div>
+        
+      </section> -->
+       
+        
+
+    </main>
+
+  </body>
 </html>
