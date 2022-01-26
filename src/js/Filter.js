@@ -15,22 +15,23 @@ const filter = class Filter {
       return produto.categoria === 'Panificadora';
     });
 
-    // para refletir o filtro na página HTML é preciso chamar  a função que cria os templates passando a lista filtrada como parâmetro.
-    // ex: nomeDoMetodoQueCriaTemplate(listaPanificadora)
+    Template.produto(listaPanificadora);
   }
 
   static filtrarPorFrutas() {
     const listaFrutas = product.filter(produto => {
       return produto.categoria === 'Frutas';
     });
-    // para refletir o filtro na página HTML é preciso chamar  a função que cria os templates passando a lista filtrada como parâmetro.
+
+    Template.produto(listaFrutas);
   }
 
   static filtrarPorBebidas() {
     const listaBebidas = product.filter(produto => {
       return produto.categoria === 'Bebidas';
     });
-    // para refletir o filtro na página HTML é preciso chamar  a função que cria os templates passando a lista filtrada como parâmetro.
+
+    Template.produto(listaBebidas);
   }
 
   static filtrarPorNomeBuscado() {
@@ -47,6 +48,6 @@ const filter = class Filter {
       }
     });
 
-    // para refletir o filtro na página HTML é preciso chamar  a função que cria os templates passando a lista filtrada como parâmetro.
+    Template.produto(listaCampoBusca);
   }
 };
