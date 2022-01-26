@@ -295,6 +295,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .carrinho__corpo--vazio img{
@@ -414,4 +415,123 @@ body{
    font-family: 'Poppins', sans-serif;
    font-size: 12px;
    font-weight: bold;
+}
+
+.quantidade__texto{
+    margin-left: 18px;
+}
+
+.quantidade__valor{
+    margin-right: 19px;
+}
+
+.preco__texto{
+    margin-left: 18px;
+}
+
+.preco__valor{
+    margin-right: 19px;
+}
+
+@media (min-width: 423px) {
+   .carrinhoLista__infos{
+       overflow-x: hidden;
+   }
+}
+
+@media (min-width: 550px) {
+    .filtros{
+        overflow-x: hidden;
+    }
+}
+ 
+@media (min-width: 800px) {
+    .cabecalho__logo--titulo{
+        margin-left: 116px;
+    }
+    .cabecalho__logo--imagem img{
+        margin-left: 140px;
+    }
+    .pesquisa{
+        width: 311px;
+        border-radius: 30px;
+        border: 2px solid #F8F9FA;
+        margin-right: 115px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .cabecalho__header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-shadow: 0px 8px 30px -20px rgb(0 0 0 / 25%);
+        margin-bottom: 42px;
+    }
+    .filtros{
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 15px;
+    }
+    .filtros button{
+        margin-right: 28px;
+    }
+    .filtros__button--todos{
+        margin-left: 117px;
+    }
+
+    .carrinho__titulo{
+        width: 320px;
+    }
+
+    .carrinho__corpo--preenchido{
+        width: 319px;
+        height: 403px;
+    }
+
+    .carrinho__corpo--vazio{
+        width: 319px;
+        height: 405px;
+        margin-bottom: 500px;
+    }
+    
+    .carrinhoLista{
+        margin-top: 17px;
+    }
+
+    .carrinhoLista__infos{
+        overflow-x: scroll;
+    }
+
+    .quanti-Preco{
+        width: 319px;
+    }
+
+    .preco{
+        margin-bottom: 350px;
+    }
+
+    .vitrine__lista{
+        overflow-x: initial;
+        overflow-y: initial;
+        flex-wrap: wrap;
+        margin-left: 116px;
+    }
+
+    main{
+        display: flex;
+    }
+
+    .carrinho-quantidade-total{
+        margin-right: 115px;
+    }
+
+    .carrinho{
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1100px) {
+    .carrinho{
+        margin-top: -50px;
+    }
 }

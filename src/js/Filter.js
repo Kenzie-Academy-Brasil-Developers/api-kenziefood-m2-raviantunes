@@ -1,49 +1,45 @@
 export { filter };
 
 const filter = class Filter {
-  constructor({ id, nome, preco, categoria, descricao, imagem }) {
-    (this.id = id),
-      (this.nome = nome),
-      (this.preco = preco),
-      (this.categoria = categoria),
-      (this.descricao = descricao),
-      (this.imagem = imagem);
-  }
-
-  static filtrarPorPanificadora() {
-    const listaPanificadora = product.filter(produto => {
-      return produto.categoria === 'Panificadora';
+  static filtrarPorPanificadora(produto) {
+    const listaPanificadora = produto.filter(({ categoria }) => {
+      if (categoria === 'Panificadora') {
+        return produto;
+      }
     });
 
     Template.produto(listaPanificadora);
   }
 
-  static filtrarPorFrutas() {
-    const listaFrutas = product.filter(produto => {
-      return produto.categoria === 'Frutas';
+  static filtrarPorFrutas(produto) {
+    const listaFrutas = produto.filter(({ categoria }) => {
+      if (categoria === 'Frutas') {
+        return produto;
+      }
     });
 
     Template.produto(listaFrutas);
   }
 
-  static filtrarPorBebidas() {
-    const listaBebidas = product.filter(produto => {
-      return produto.categoria === 'Bebidas';
+  static filtrarPorBebidas(produto) {
+    const listaBebidas = produto.filter(({ categoria }) => {
+      if (categoria === 'Bebidas') {
+        return produto;
+      }
     });
 
     Template.produto(listaBebidas);
   }
 
-  static filtrarPorNomeBuscado() {
+  static filtrarPorNomeBuscado(produto) {
     // pegar o valor do input
-    let nomeProdutoDigitado = document.querySelector('.inputPesquisarProdutos');
+    let nomeProdutoDigitado = document.querySelector('.pesquisa__input');
     nomeProdutoDigitado = nomeProdutoDigitado.toLowerCase();
 
-    const listaCampoBusca = product.filter(produto => {
-      if (produto.nome.toLowerCase() === nomeProdutoDigitado) {
+    const listaCampoBusca = produto.filter(({ nome, categoria }) => {
+      if (nome.toLowerCase() === nomeProdutoDigitado) {
         return produto;
-      }
-      if (produto.categoria.toLowerCase() === nomeProdutoDigitado) {
+      } else if (categoria.toLowerCase() === nomeProdutoDigitado) {
         return produto;
       }
     });
