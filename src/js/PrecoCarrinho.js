@@ -11,7 +11,7 @@ const precoCarrinho = class precoCarrinho {
   }
 
   static atualizaPreco(preco) {
-    const pPrecoTotal = document.querySelector('.precoTotalProdutos');
+    const pPrecoTotal = document.querySelector('.preco__valor');
     pPrecoTotal.innerText = `${preco.toFixed(2).replace('.', ',')}`;
   }
 };
