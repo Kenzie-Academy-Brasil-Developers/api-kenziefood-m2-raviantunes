@@ -36,7 +36,7 @@ const filter = class Filter {
 
   static filtrarPorNomeBuscado() {
     // pegar o valor do input
-    let nomeProdutoDigitado = document.querySelector('.inputPesquisarProdutos');
+    let nomeProdutoDigitado = document.querySelector('.pesquisa__input');
     nomeProdutoDigitado = nomeProdutoDigitado.toLowerCase();
 
     const listaCampoBusca = product.filter(produto => {
