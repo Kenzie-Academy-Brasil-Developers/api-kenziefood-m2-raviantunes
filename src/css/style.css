@@ -318,6 +318,7 @@ body{
 }
 
 .carrinho__corpo--preenchido{
+    display: none;
     width: 95%;   
     height: 437px;
     background-color: #FFFFFF;
@@ -388,6 +389,7 @@ body{
 }
 
 .quanti-Preco{
+    display: none;
     margin-bottom: 50px;
     width: 90%;
     margin-left: 18px;
