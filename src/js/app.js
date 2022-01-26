@@ -1,16 +1,23 @@
 import { filter } from './Filter.js';
+import { precoCarrinho } from './PrecoCarrinho.js';
+import { quantidadeProdutos } from './QuantidadeProdutos.js';
 
-// AGUARDANDO ALTERAÇÕES NAS CLASSES DO CSS PARA MEXER
-// para executar o método, adicionar um event listener no botão responsável pelo filtro
-// lembrar de selecionar o botão em nosso HTML
-// const botaoMostrarPanificadora = document.querySelector('botaoPanificadora');
-// Adicionar o event listener de clique, e executando a função de filtro
-// botaoMostrarPanificadora.addEventListener('click', filtrarPorPanificadora);
-// Verificar se esse processo está correto e repetir pros próximos.
-// o mesmo pros demais filtros
+const botaoMostrarPanificadora = document.querySelector(
+  'filtros__button--panificadora'
+);
+botaoMostrarPanificadora.addEventListener(
+  'click',
+  filter.filtrarPorPanificadora
+);
 
-// const botaoMostrarTodos = document.querySelector('botaoTodos');
-// criar uma arrow function por causa dos parâmetros que a outra função exige
-// botaoMostrarTodos.addEventListener('click', () => {
-//    ex: nomeDoMetodoQueCriaTemplate(product)
-// });
+const botaoMostrarFrutas = document.querySelector('filtros__button--frutas');
+botaoMostrarFrutas.addEventListener('click', filter.filtrarPorFrutas);
+
+const botaoMostrarBebidas = document.querySelector('filtros__button--bebidas');
+botaoMostrarBebidas.addEventListener('click', filter.filtrarPorBebidas);
+
+const botaoMostrarTodos = document.querySelector('filtros__button--todos');
+
+botaoMostrarTodos.addEventListener('click', () => {
+  Template.produto(product);
+});
