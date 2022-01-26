@@ -13,7 +13,7 @@ class Template {
 		`
 		return li
 
-		}
+	}
 
 	static carrinho({id, nome, preco, categoria, descricao, imagem, createdAt, updatedAt}){
 
@@ -27,7 +27,7 @@ class Template {
 		`
 		return li
 	
-		}
+	}
 		
 }
 
