@@ -73,8 +73,12 @@ const filter = class Filter {
     const produtos = await filtrarProdutos();
     const vitrine = document.querySelector('.vitrine__lista');
     vitrine.innerHTML = '';
-    const listaCampoBusca = produtos.filter(({ nome }) => {
-      return nome.toLowerCase() === nomeProdutoDigitado;
+
+    const listaCampoBusca = produtos.filter(({ nome, categoria }) => {
+      return (
+        nome.toLowerCase().includes(nomeProdutoDigitado) ||
+        categoria.toLowerCase().includes(nomeProdutoDigitado)
+      );
     });
 
     listaCampoBusca.forEach(item => {
