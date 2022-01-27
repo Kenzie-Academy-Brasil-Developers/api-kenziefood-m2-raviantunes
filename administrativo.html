@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/administrativo.css">
+  <title>Administrativo</title>
+</head>
+<body>
+    <section id="titulo">
+      <h1>Cadastro e manutenção de produtos</h1>
+    </section>
+    
+    <section id="cadastro">
+      <h2>Cadastre</h2>
+      <form id="cadastre" class="form">
+        <input name="nome" id="cadnome" class="input" type="text" placeholder="Nome">
+        <input name="preco" id="cadpreco" class="input" type="text" placeholder="Preço">
+        <input name="categoria" id="cadcategoria" class="input" type="text" placeholder="Categoria">
+        <input name="descricao" id="caddescricao" class="input" type="text" placeholder="Descrição">
+        <input name="imagem" id="cadimagem" class="input" type="text" placeholder="Imagem">
+        <button class="button" id="incluir">Incluir Produto</button>
+      </form>
+    </section>
+
+    <section id="alteracao">
+      <h2>Altere um ou mais campos e clique em "Altere"</h2>
+        <form class="form"></form>
+          <input name="id" id="idalt" class="input" type="text" placeholder="ID">
+          <input name="nome" id="altnome" class="input" type="text" placeholder="Nome">
+          <input name="preco" id="altpreco" class="input" type="text" placeholder="Preço">
+          <input name="categoria" id="altcategoria" class="input" type="text" placeholder="Categoria">
+          <input name="descricao" id="altdescricao" class="input" type="text" placeholder="Descrição">
+          <input name="imagem" id="altimagem" class="input" type="text" placeholder="Imagem">
+        <button class="button" id="modificar">Altere</button>
+      </form>
+    </section>
+
+    <section id="delete">
+      <h2>Apague</h2>
+      <form class="form">
+        <input name="id" id="id" class="input" type="text" placeholder="ID">
+        <button class="button" id="apagar">Apagar</button>
+      </form>
+    </section>
+
+    <section id="pesquisa">
+      <h2>Consulte por ID</h2>
+      <form class="form">
+        <input name="idsearch" id="idsearch" class="input" type="text" placeholder="ID">
+        <button class="button" id="pesquisaID">Pesquisar</button>
+      </form>
+      <ul id="pesquisaID"></ul>
+    </section>
+
+
+   <script type="module" src="./src/api-extra/index.js"></script>
+</body>
+</html>

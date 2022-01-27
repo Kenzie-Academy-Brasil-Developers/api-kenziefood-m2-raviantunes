@@ -36,7 +36,6 @@ class Template {
 			<span class="item__categoria--${categoria.toLowerCase()}">
 				<img src="${imgCategoria}" alt="Ícone da categoria"> ${categoria}
 			</span>
-
 			<h2 class="item__nome">${nome}</h2>
 			<p class="item__info">${descricao}</p>
 			<span class="item__preco">R$ ${preco.toFixed(2).replace('.', ',')}</span>
@@ -61,7 +60,6 @@ class Template {
 		}
 		
 		return li
-
 	}
 
   static carrinho({
