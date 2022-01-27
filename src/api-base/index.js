@@ -14,7 +14,6 @@ async function getProducts () {
         vitrine.appendChild(Template.produto(produto))})
 }
 
-
 const carrinho = document.querySelector(".carrinhoLista") 
 async function getProduct(id) {
       const link = `https://kenzie-food-api.herokuapp.com/product/${id}`

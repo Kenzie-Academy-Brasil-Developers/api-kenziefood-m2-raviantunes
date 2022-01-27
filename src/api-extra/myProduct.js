@@ -1,1 +1,0 @@
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsImlhdCI6MTY0MzExODA1NiwiZXhwIjoxNjQzOTgyMDU2LCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ._b3qoZG6fE7-TAiKdkDxozjaorFyvhpoLPa9DLZTQbw'
