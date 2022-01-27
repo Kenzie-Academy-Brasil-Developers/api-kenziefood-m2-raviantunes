@@ -47,7 +47,9 @@ body {
   font-size: 14px;
   padding: 10px;
   width: 70%;
+  outline: 0;
 }
+
 
 .pesquisa__button {
   width: 44px;
@@ -373,6 +375,7 @@ body {
   margin-left: 13px;
   margin-right: 18px;
   justify-content: space-around;
+  width: 232px;
 }
 
 .carrinhoLista__nome {
@@ -544,6 +547,10 @@ body {
 
   .carrinho {
     margin-top: 0;
+  }
+
+  .carrinhoLista__item--vinho div{
+    overflow-x: hidden;
   }
 }
 
