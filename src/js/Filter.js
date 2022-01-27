@@ -1,6 +1,5 @@
 import { Template } from '../api-base/models/template.js';
 export { filter, filtrarProdutos, buscarProdutos };
-// export { filtrarProdutos };
 
 const botaoMostrarPanificadora = document.querySelector(
   '.filtros__button--panificadora'
@@ -16,7 +15,6 @@ const buscarProdutos = () => {
 let arrayProdutos;
 async function filtrarProdutos() {
   arrayProdutos = await buscarProdutos();
-  // console.log(arrayProdutos);
   return arrayProdutos;
 }
 
