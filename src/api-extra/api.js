@@ -1,27 +1,43 @@
-import {NewProduct} from "./newProduct.js"
-import {Template} from "../api-base/models/template.js"
+import { NewProduct } from "./newProduct.js"
+import { Template } from "../api-base/models/template.js"
+import { ControllerCarrinho } from "../js/Carrinho.js"
+import { vitrine } from "../api-base/models/"
 
 const token ='Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsImlhdCI6MTY0MzExODA1NiwiZXhwIjoxNjQzOTgyMDU2LCJzdWIiOiJbb2JqZWN0IFVuZGVmaW5lZF0ifQ._b3qoZG6fE7-TAiKdkDxozjaorFyvhpoLPa9DLZTQbw'
 
 class API {
 	static async getProducts () {
+		const vitrine = document.querySelector('.vitrine__lista');
 		const link = 'https://kenzie-food-api.herokuapp.com/my/product'
 		const response = await fetch(link, { headers : {Authorization:token, "Content-Type": "application/json"}})
-		  .then((res) => res.json())
-		  .then((res) => res)
-		  .catch((error) => error);
-		  console.log(response)
-		  // response.forEach((produto) => {
-		  // teste.appendChild(Template.produto(produto))})
-	  }
+		.then((res) => res.json())
+		.then((res) => res)
+		.catch((error) => error);
+		response.forEach((produto) => {
+		vitrine.appendChild(Template.produto(produto))})
+	}
   
 
 	static async getProduct(id) {
+		const carrinho = document.querySelector(".carrinhoLista") 
 		const link = `https://kenzie-food-api.herokuapp.com/my/product/${id}`
 		const response = await fetch(link, { headers : {Authorization:token, "Content-Type": "application/json"}})
-		  .then((res) => res.json())
-		  .then((res) => res)
-		  .catch((error) => error)
+		.then((res) => res.json())
+		.then((res) => res)
+		.catch((error) => error)
+		let produto = Template.carrinho(response)
+     	ControllerCarrinho.mostrarCarrinho(carrinho, produto)
+      	return produto;
+	}
+
+	static async getProductExtra(id) {
+		const link = `https://kenzie-food-api.herokuapp.com/my/product/${id}`
+		const response = await fetch(link, { headers : {Authorization:token, "Content-Type": "application/json"}})
+		.then((res) => res.json())
+		.then((res) => res)
+		.catch((error) => error)
+		const vitrine = document.getElementById("pesquisaPorID")
+		vitrine.appendChild(Template.produto(response))
 	}
   
 	static async postProducts (data) {
@@ -57,7 +73,6 @@ class API {
 		console.log(newProduto)
 		this.postProducts(newProduto)
 		this.delProducts(id)
-		this.getProducts()	
 	}
 
   

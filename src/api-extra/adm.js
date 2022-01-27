@@ -1,5 +1,5 @@
 import {Template} from "../api-base/models/template.js"
-import {NewProduct} from "./newProduct.js"
+import {NewProduct} from "../api-extra/newProduct.js"
 import {API} from "./api.js"
 const cadastrar = (e) => {
     e.preventDefault();
@@ -55,20 +55,16 @@ const deletar = (e) => {
     e.preventDefault();
     const id = document.getElementById("id").value
     API.delProducts(id)
-    API.getProducts()
 }
-API.getProducts()
+
 const apagar = document.getElementById("apagar")
 apagar.addEventListener("click", deletar);
 
 const pesquisa = (e) => {
   e.preventDefault();
   const idsearch = document.getElementById("idsearch").value
-  API.getProduct(idsearch)
+  API.getProductExtra(idsearch)
 }
 
 const pesquisar = document.getElementById("pesquisaID")
 pesquisar.addEventListener("click", pesquisa);
-
-
-//let carrinho = document.getElementById("carrinho") //tem que ser "ul"

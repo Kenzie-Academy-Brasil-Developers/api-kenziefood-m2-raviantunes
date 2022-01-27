@@ -9,11 +9,11 @@
 </head>
 <body>
     <section id="titulo">
-      <h1>Cadastro e manutenção de produtos</h1>
+      <h1>Cadastro e manutenção de produtos Kenzie Food</h1>
     </section>
     
     <section id="cadastro">
-      <h2>Cadastre</h2>
+      <h2>Cadastro de novo produto</h2>
       <form id="cadastre" class="form">
         <input name="nome" id="cadnome" class="input" type="text" placeholder="Nome">
         <input name="preco" id="cadpreco" class="input" type="text" placeholder="Preço">
@@ -25,7 +25,7 @@
     </section>
 
     <section id="alteracao">
-      <h2>Altere um ou mais campos e clique em "Altere"</h2>
+      <h2>Altere um ou mais campos de um produto do DB</h2>
         <form class="form"></form>
           <input name="id" id="idalt" class="input" type="text" placeholder="ID">
           <input name="nome" id="altnome" class="input" type="text" placeholder="Nome">
@@ -38,7 +38,7 @@
     </section>
 
     <section id="delete">
-      <h2>Apague</h2>
+      <h2>Retirar produto do DB</h2>
       <form class="form">
         <input name="id" id="id" class="input" type="text" placeholder="ID">
         <button class="button" id="apagar">Apagar</button>
@@ -51,10 +51,10 @@
         <input name="idsearch" id="idsearch" class="input" type="text" placeholder="ID">
         <button class="button" id="pesquisaID">Pesquisar</button>
       </form>
-      <ul id="pesquisaID"></ul>
+      <ul id="pesquisaPorID"></ul>
     </section>
 
 
-   <script type="module" src="./src/api-extra/index.js"></script>
+   <script type="module" src="./src/api-extra/adm.js"></script>
 </body>
 </html>

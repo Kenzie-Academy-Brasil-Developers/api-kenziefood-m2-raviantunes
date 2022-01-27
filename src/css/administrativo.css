@@ -1,0 +1,17 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 170px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+input, button {
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-weight: 800;
+}
