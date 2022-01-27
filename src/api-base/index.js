@@ -9,7 +9,6 @@ async function getProducts () {
         .then((res) => res.json())
         .then((res) => res)
         .catch((error) => error);
-        console.log(response)
         response.forEach((produto) => {
         vitrine.appendChild(Template.produto(produto))})
 }

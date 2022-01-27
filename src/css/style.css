@@ -58,6 +58,10 @@ body {
   border-radius: 100px;
 }
 
+.pesquisa__button:hover {
+  cursor: pointer;
+}
+
 .filtros {
   display: flex;
   overflow-x: scroll;
@@ -76,6 +80,10 @@ body {
   margin-right: 22px;
   font-weight: 500;
   font-size: 14px;
+}
+
+.filtros button:hover {
+  cursor: pointer;
 }
 
 .filtros__button--todos {
@@ -256,6 +264,10 @@ body {
   font-size: 9px;
 }
 
+.item__botao:hover {
+  cursor: pointer;
+}
+
 .carrinho {
   margin-left: 18px;
   margin-top: 40px;
@@ -387,6 +399,10 @@ body {
   border-radius: 4px;
   background-color: #f8f9fa;
   color: #868e96;
+}
+
+.carrinhoLista__botao:hover {
+  cursor: pointer;
 }
 
 .quanti-Preco {

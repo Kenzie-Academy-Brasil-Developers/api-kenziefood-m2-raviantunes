@@ -1,5 +1,3 @@
-import { NewProductModel } from '../../api-extra/newProduct.js';
-
 class Template {
   static produto({
     id,

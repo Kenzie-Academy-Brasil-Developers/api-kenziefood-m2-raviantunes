@@ -1,7 +1,4 @@
 import { filter } from './Filter.js';
-import { precoCarrinho } from './PrecoCarrinho.js';
-import { quantidadeProdutos } from './QuantidadeProdutos.js';
-import { Template } from '../api-base/models/template.js';
 import { getProduct } from '../api-base/index.js';
 import { getProducts } from '../api-base/index.js';
 import { ControllerCarrinho } from './Carrinho.js';
