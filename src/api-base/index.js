@@ -12,7 +12,7 @@ async function getProducts () {
         console.log(response)
         response.forEach((produto) => {
         vitrine.appendChild(Template.produto(produto))})
-    }
+}
 
 
 const carrinho = document.querySelector(".carrinhoLista") 

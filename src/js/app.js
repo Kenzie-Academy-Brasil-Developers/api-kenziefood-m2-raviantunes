@@ -7,7 +7,7 @@ import { getProducts } from '../api-base/index.js';
 import { ControllerCarrinho } from './Carrinho.js';
 
 const botaoMostrarPanificadora = document.querySelector(
-  'filtros__button--panificadora'
+  '.filtros__button--panificadora'
 );
 botaoMostrarPanificadora.addEventListener(
   'click',
