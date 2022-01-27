@@ -1,49 +1,92 @@
-export { filter };
+import { Template } from '../api-base/models/template.js';
+export { filter, filtrarProdutos, buscarProdutos };
+// export { filtrarProdutos };
+
+const buscarProdutos = () => {
+  return fetch(`https://kenzie-food-api.herokuapp.com/product`)
+    .then(response => response.json())
+    .then(produto => produto)
+    .catch(error => error);
+};
+
+async function filtrarProdutos() {
+  const arrayProdutos = await buscarProdutos();
+  // console.log(arrayProdutos);
+  filter.filtrarPorFrutas(arrayProdutos);
+}
+
+// async function getProducts () {
+//   let produtos = []
+//   const link = 'https://kenzie-food-api.herokuapp.com/product'
+//   const response = await fetch(link)
+//     .then((res) => res.json())
+//     .then((res) => res)
+//     .catch((error) => error);
+//     console.log(response)
+//     response.forEach((produto) => {
+//     teste.appendChild(Template.produto(produto))})
+// }
+// getProducts()
 
 const filter = class Filter {
-  static filtrarPorPanificadora(produto) {
-    const listaPanificadora = produto.filter(({ categoria }) => {
-      if (categoria === 'Panificadora') {
-        return produto;
-      }
+  static filtrarPorPanificadora(produtos) {
+    const vitrine = document.querySelector('.vitrine__lista');
+    vitrine.innerHTML = '';
+    const listaPanificadora = produtos.filter(({ categoria }) => {
+      return categoria === 'Panificadora';
     });
 
-    Template.produto(listaPanificadora);
+    listaPanificadora.forEach(item => {
+      vitrine.appendChild(Template.produto(item));
+    });
+    return listaPanificadora;
   }
 
-  static filtrarPorFrutas(produto) {
-    const listaFrutas = produto.filter(({ categoria }) => {
-      if (categoria === 'Frutas') {
-        return produto;
-      }
+  static filtrarPorFrutas(produtos) {
+    const vitrine = document.querySelector('.vitrine__lista');
+    vitrine.innerHTML = '';
+    const listaFrutas = produtos.filter(({ categoria }) => {
+      return categoria === 'Frutas';
     });
 
-    Template.produto(listaFrutas);
-  }
-
-  static filtrarPorBebidas(produto) {
-    const listaBebidas = produto.filter(({ categoria }) => {
-      if (categoria === 'Bebidas') {
-        return produto;
-      }
+    listaFrutas.forEach(item => {
+      vitrine.appendChild(Template.produto(item));
     });
 
-    Template.produto(listaBebidas);
+    return listaFrutas;
   }
 
-  static filtrarPorNomeBuscado(produto) {
-    // pegar o valor do input
+  static filtrarPorBebidas(produtos) {
+    const vitrine = document.querySelector('.vitrine__lista');
+    vitrine.innerHTML = '';
+    const listaBebidas = produtos.filter(({ categoria }) => {
+      return categoria === 'Bebidas';
+    });
+    listaBebidas.forEach(item => {
+      vitrine.appendChild(Template.produto(item));
+    });
+
+    return listaBebidas;
+  }
+
+  static filtrarPorNomeBuscado(produtos) {
     let nomeProdutoDigitado = document.querySelector('.pesquisa__input');
     nomeProdutoDigitado = nomeProdutoDigitado.toLowerCase();
 
-    const listaCampoBusca = produto.filter(({ nome, categoria }) => {
-      if (nome.toLowerCase() === nomeProdutoDigitado) {
-        return produto;
-      } else if (categoria.toLowerCase() === nomeProdutoDigitado) {
-        return produto;
-      }
+    const vitrine = document.querySelector('.vitrine__lista');
+    vitrine.innerHTML = '';
+    const listaCampoBusca = produtos.filter(({ nome, categoria }) => {
+      return nome.toLowerCase() === nomeProdutoDigitado;
+
+      // else if (categoria.toLowerCase() === nomeProdutoDigitado) {
+      //   return categoria.toLowerCase() === nomeProdutoDigitado;
+      // }
     });
 
-    Template.produto(listaCampoBusca);
+    listaBebidas.forEach(item => {
+      vitrine.appendChild(Template.produto(item));
+    });
+
+    return listaCampoBusca;
   }
 };
