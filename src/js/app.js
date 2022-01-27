@@ -15,28 +15,21 @@ botaoMostrarPanificadora.addEventListener(
 );
 
 const botaoMostrarFrutas = document.querySelector('.filtros__button--frutas');
-botaoMostrarFrutas.addEventListener('click', () => {
-  filter.filtrarPorFrutas(produtoFiltragem);
-});
+botaoMostrarFrutas.addEventListener('click', filter.filtrarPorFrutas);
 
 const botaoMostrarBebidas = document.querySelector('.filtros__button--bebidas');
-botaoMostrarBebidas.addEventListener('click', () => {
-  filter.filtrarPorBebidas(produtoFiltragem);
-});
+botaoMostrarBebidas.addEventListener('click', filter.filtrarPorBebidas);
 
 const inputCampoBusca = document.querySelector('.pesquisa__input');
 inputCampoBusca.addEventListener('onKeyUp', () => {
-  filter.filtrarPorNomeBuscado(produtoFiltragem);
+  filter.filtrarPorNomeBuscado(inputCampoBusca.value);
 });
-
 const botaoCampoBusca = document.querySelector('.pesquisa__button');
-botaoCampoBusca.addEventListener('click', () => {
-  filter.filtrarPorNomeBuscado(produtoFiltragem);
-});
+botaoCampoBusca.addEventListener('click', filter.filtrarPorNomeBuscado);
 
 const botaoMostrarTodos = document.querySelector('.filtros__button--todos');
 botaoMostrarTodos.addEventListener('click', () => {
-  Template.produto(produtoFiltragem);
+  getProducts();
 });
 
 getProducts()

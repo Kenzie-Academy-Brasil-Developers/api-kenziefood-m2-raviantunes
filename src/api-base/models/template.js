@@ -1,9 +1,17 @@
-import { NewProductModel } from "../../api-extra/newProduct.js"
+import { NewProductModel } from '../../api-extra/newProduct.js';
 
 class Template {
-	
-	static produto({id, nome, preco, categoria, descricao, imagem, createdAt, updatedAt}){
-
+  static produto({
+    id,
+    nome,
+    preco,
+    categoria,
+    descricao,
+    imagem,
+    createdAt,
+    updatedAt
+  }) {
+ 
 		let imgCategoria 
 		if(categoria === "Panificadora"){
 			imgCategoria = "./src/img/filtros/Icon_bread.png"
@@ -56,13 +64,20 @@ class Template {
 
 	}
 
-	static carrinho({id, nome, preco, categoria, descricao, imagem, createdAt, updatedAt}){
-
-		const li  = document.createElement("li")
-		li.id = id
-		li.classList.add("carrinhoLista__item")
-		li.innerHTML =
-		`
+  static carrinho({
+    id,
+    nome,
+    preco,
+    categoria,
+    descricao,
+    imagem,
+    createdAt,
+    updatedAt
+  }) {
+    const li = document.createElement('li');
+    li.id = id;
+    li.classList.add('carrinhoLista__item');
+    li.innerHTML = `
 		<figure class="carrinhoLista__imagem">
 		  <img  src="${imagem}"  alt="${nome}"/>
 		  <figcaption>${nome}</figcaption>
@@ -71,14 +86,15 @@ class Template {
 		<div class="carrinhoLista__infos">
 		  <h2 class="carrinhoLista__nome">${nome}</h2>
 		  <span class="carrinhoLista__categoria">${categoria}</span>
-		  <span class="carrinhoLista__preco">R$ ${preco.toFixed(2).replace('.', ',')}</span>
+		  <span class="carrinhoLista__preco">R$ ${preco
+        .toFixed(2)
+        .replace('.', ',')}</span>
 		</div>
 		  
 		<button class="carrinhoLista__botao" name="botão para remover do carrinho" type="button"><i class="fas fa-trash"></i></button>
-		`
-		return li
-	}
-		
+		`;
+    return li;
+  }
 }
 
-export {Template}
+export { Template };
