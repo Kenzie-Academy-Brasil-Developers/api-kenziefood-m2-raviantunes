@@ -1,20 +1,19 @@
 import {Template} from "./models/template.js"
-//let vitrine = document.getElementById("vitrine") //tem que ser "ul"
+import {ControllerCarrinho} from "../js/Carrinho.js"
 
-  async function getProducts () {
-      let produtos = []
+const vitrine = document.querySelector(".vitrine__lista") 
+
+async function getProducts () {
       const link = 'https://kenzie-food-api.herokuapp.com/product'
       const response = await fetch(link)
         .then((res) => res.json())
         .then((res) => res)
         .catch((error) => error);
-        console.log(response)
         response.forEach((produto) => {
-        teste.appendChild(Template.produto(produto))})
-    }
-getProducts()
+        vitrine.appendChild(Template.produto(produto))})
+}
 
-//let carrinho = document.getElementById("carrinho") //tem que ser "ul"
+const carrinho = document.querySelector(".carrinhoLista") 
 async function getProduct(id) {
       const link = `https://kenzie-food-api.herokuapp.com/product/${id}`
       const response = await fetch(link)
@@ -22,8 +21,8 @@ async function getProduct(id) {
         .then((res) => res)
         .catch((error) => error);
       let produto = Template.carrinho(response)
-      carrinho.appendChild(produto)
+      ControllerCarrinho.mostrarCarrinho(carrinho, produto)
       return produto;
-  }
+}
 
-  
+export {getProduct, getProducts}

@@ -1,415 +1,561 @@
-body{
+body {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.cabecalho__logo--imagem figcaption {
+  display: none;
+}
+
+.cabecalho__logo--imagem img {
+  width: 30px;
+  height: 20px;
+  margin-left: 40px;
+}
+
+.cabecalho__logo--titulo {
+  margin-left: 17px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cabecalho__logo--titulo-span {
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pesquisa {
+  width: 80%;
+  background-color: #f8f9fa;
+  border-radius: 33px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.pesquisa__input {
+  border: none;
+  background-color: #f8f9fa;
+  border-radius: 33px;
+  font-size: 14px;
+  padding: 10px;
+  width: 70%;
+  outline: 0;
+}
+
+
+.pesquisa__button {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background-color: #ffe9ee;
+  color: #ff2253;
+  border-radius: 100px;
+}
+
+.pesquisa__button:hover {
+  cursor: pointer;
+}
+
+.filtros {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.filtros button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 15px;
+  margin-right: 22px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.filtros button:hover {
+  cursor: pointer;
+}
+
+.filtros__button--todos {
+  width: 72px;
+  margin-left: 18px;
+  background-color: #f8f9fa;
+  border: 2px solid #212529;
+}
+
+.filtros__button--panificadora img {
+  width: 20px;
+  height: 20px;
+  margin-right: 17px;
+}
+
+.filtros__button--panificadora {
+  width: 148px;
+  border: 2px solid #fff7f4;
+  background-color: #fff7f4;
+}
+
+.filtros__button--frutas img {
+  width: 20px;
+  height: 20px;
+  margin-right: 17px;
+}
+
+.filtros__button--frutas {
+  width: 107px;
+  background-color: #ffe4ea;
+  border: 2px solid #ffe4ea;
+}
+
+.filtros__button--bebidas img {
+  width: 20px;
+  height: 20px;
+  margin-right: 17px;
+}
+
+.filtros__button--bebidas {
+  width: 118px;
+  background-color: #f3eef5;
+  border: 2px solid #f3eef5;
+}
+
+.vitrine__lista {
+  margin-left: 18px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 380px;
+}
+
+.vitrine__item {
+  margin-top: 17px;
+  height: 369px;
+  width: 300px;
+  margin-right: 23px;
+}
+
+.item__imagem--panqueca figcaption {
+  display: none;
+}
+
+.item__imagem--panqueca img {
+  width: 300px;
+  height: 200px;
+}
+
+.item__imagem figcaption {
+  display: none;
+}
+
+.item__imagem img {
+  width: 294px;
+  height: 194px;
+  border-radius: 5px;
+}
+
+.item__imagem {
+  width: 294px;
+  height: 194px;
+  border: 3px solid #ffe9ee;
+  border-radius: 8px;
+  position: relative;
+}
+
+.item__categoria--panificadora {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 132px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 1px 1px;
+  background-color: #ffe9ee;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-left: 12px;
+  margin-top: -20px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.item__categoria--frutas {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 94px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 1px 1px;
+  background-color: #ffe9ee;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-left: 12px;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.item__categoria--bebidas {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 106px;
+  height: 30px;
+  border-radius: 30px;
+  padding: 1px 1px;
+  background-color: #ffe9ee;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-left: 12px;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.item__nome {
+  width: 267px;
+  height: 27px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+.item__info {
+  margin-top: 16px;
+  width: 300px;
+  height: 48px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #868e96;
+}
+
+.item__preco {
+  margin-top: 27px;
+  width: 53px;
+  height: 14px;
+  font-family: 'Poppin', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 212px;
+}
+
+.item__botao {
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  background-color: #e4f7ef;
+  color: #4aca94;
+  font-size: 9px;
+}
+
+.item__botao:hover {
+  cursor: pointer;
+}
+
+.carrinho {
+  margin-left: 18px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.carrinho__titulo {
+  width: 95%;
+  height: 60px;
+  background-color: #ff2253;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-bottom: 7px;
+}
+
+.carrinho__titulo p {
+  margin-left: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.carrinho__titulo i {
+  font-size: 13px;
+  margin-right: 21px;
+}
+
+.carrinho__corpo--vazio {
+  width: 95%;
+  height: 433px;
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.carrinho__corpo--vazio img {
+  margin-top: 133px;
+  margin-bottom: 24px;
+}
+
+.carrinho__corpo--vazio h2 {
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #868e96;
+}
+
+.carrinho__corpo--vazio p {
+  color: #868e96;
+  font-size: 13px;
+  font-weight: 400;
+  width: 65%;
+  text-align: center;
+}
+
+.carrinho__corpo--preenchido {
+  display: none;
+  width: 95%;
+  height: 437px;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.carrinhoLista {
+  margin-top: 19px;
+  width: 100%;
+}
+
+.carrinhoLista__item {
+  width: 95%;
+  height: 79px;
+  margin-bottom: 43px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carrinhoLista__imagem figcaption {
+  display: none;
+}
+
+.carrinhoLista__imagem img {
+  width: 75px;
+  height: 75px;
+  border-radius: 9px;
+}
+
+.carrinhoLista__infos {
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-left: 13px;
+  margin-right: 18px;
+  justify-content: space-around;
+  width: 232px;
+}
+
+.carrinhoLista__nome {
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.carrinhoLista__categoria {
+  color: #868e96;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.carrinhoLista__preco {
+  color: #212529;
+  font-size: 12px;
+}
+
+.carrinhoLista__botao {
+  width: 27px;
+  height: 27px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  color: #868e96;
+}
+
+.carrinhoLista__botao:hover {
+  cursor: pointer;
+}
+
+.quanti-Preco {
+  display: none;
+  margin-bottom: 50px;
+  width: 90%;
+  margin-left: 18px;
+}
+
+.quantidade {
+  background-color: #f8f9fa;
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.preco {
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.quantidade__texto {
+  margin-left: 18px;
+}
+
+.quantidade__valor {
+  margin-right: 19px;
+}
+
+.preco__texto {
+  margin-left: 18px;
+}
+
+.preco__valor {
+  margin-right: 19px;
+}
+
+@media (min-width: 423px) {
+  .carrinhoLista__infos {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 550px) {
+  .filtros {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 800px) {
+  .cabecalho__logo--titulo {
+    margin-left: 116px;
+  }
+  .cabecalho__logo--imagem img {
+    margin-left: 140px;
+  }
+  .pesquisa {
+    width: 311px;
+    border-radius: 30px;
+    border: 2px solid #f8f9fa;
+    margin-right: 115px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .cabecalho__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0px 8px 30px -20px rgb(0 0 0 / 25%);
+    margin-bottom: 42px;
+  }
+  .filtros {
     width: 100%;
-    height: 100%;
     margin-top: 10px;
-}
+    padding-top: 15px;
+  }
+  .filtros button {
+    margin-right: 28px;
+  }
+  .filtros__button--todos {
+    margin-left: 117px;
+  }
 
-.cabecalho__logo--imagem figcaption{
-    display: none;
-}
+  .carrinho__titulo {
+    width: 320px;
+  }
 
-.cabecalho__logo--imagem img{
-    width: 30px;
-    height: 20px;
-    margin-left: 40px;
-}
+  .carrinho__corpo--preenchido {
+    width: 319px;
+    height: 403px;
+  }
 
-.cabecalho__logo--titulo{
-    margin-left: 17px;
-    font-size: 22px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-}
+  .carrinho__corpo--vazio {
+    width: 319px;
+    height: 405px;
+    margin-bottom: 500px;
+  }
 
-.cabecalho__logo--titulo-span{
-    font-size: 17px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-}
+  .carrinhoLista {
+    margin-top: 17px;
+  }
 
-.pesquisa{
-    width: 80%;
-    background-color: #F8F9FA;
-    border-radius: 33px;
-    padding: 15px;
+  .carrinhoLista__infos {
+    overflow-x: scroll;
+  }
+
+  .quanti-Preco {
+    width: 319px;
+  }
+
+  .preco {
+    margin-bottom: 350px;
+  }
+
+  .vitrine__lista {
+    overflow-x: initial;
+    overflow-y: initial;
+    flex-wrap: wrap;
+    margin-left: 116px;
+  }
+
+  main {
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
+  }
 
-.pesquisa__input{
-    border: none;
-    background-color: #F8F9FA;
-    border-radius: 33px;
-    font-size: 14px;
-    padding: 10px;
-    width: 70%;
-}
+  .carrinho-quantidade-total {
+    margin-right: 115px;
+  }
 
-.pesquisa__button{
-    width: 44px;
-    height: 44px;
-    border: none;
-    background-color: #FFE9EE;
-    color: #FF2253;
-    border-radius: 100px;
-}
+  .carrinho {
+    margin-top: 0;
+  }
 
-.filtros{
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-
-.filtros button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    height: 40px;
-    border-radius: 30px;
-    padding: 15px;
-    margin-right: 22px;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.filtros__button--todos{
-    width: 72px;
-    margin-left: 18px;
-    background-color: #F8F9FA;
-    border: 2px solid #212529;
-}
-
-.filtros__button--panificadora img{
-    width: 20px;
-    height: 20px;
-    margin-right: 17px;
-}
-
-.filtros__button--panificadora{
-    width: 148px;
-    border: 2px solid #FFF7F4;
-    background-color: #FFF7F4;
-}
-
-.filtros__button--frutas img{
-    width: 20px;
-    height: 20px;
-    margin-right: 17px;
-}
-
-.filtros__button--frutas{
-    width: 107px;
-    background-color: #FFE4EA;
-    border: 2px solid #FFE4EA;
-}
-
-.filtros__button--bebidas img{
-    width: 20px;
-    height: 20px;
-    margin-right: 17px;
-}
-
-.filtros__button--bebidas{
-    width: 118px;
-    background-color: #F3EEF5;
-    border: 2px solid #F3EEF5;
-}
-
-.vitrine__lista{
-    margin-left: 18px;
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    height: 380px;
-}
-
-.vitrine__item{
-    margin-top: 17px;
-    height: 369px;
-    width: 300px;
-    margin-right: 23px;
-}
-
-.item__imagem--panqueca figcaption{
-    display: none;
-}
-
-.item__imagem--panqueca img{
-    width: 300px;
-    height: 200px;
-}
-
-.item__imagem figcaption{
-    display: none;
-}
-
-.item__imagem img{
-    width: 294px;
-    height: 194px;
-    border-radius: 5px;
-}
-
-.item__imagem{
-    width: 294px;
-    height: 194px;
-    border: 3px solid #FFE9EE;
-    border-radius: 8px;
-    position: relative;
-}
-
-.item__categoria--panificadora{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 132px;
-    height: 30px;
-    border-radius: 30px;
-    padding: 1px 1px;
-    background-color: #FFE9EE;
-    font-size: 12px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    margin-left: 12px;
-    margin-top: -20px; 
-    margin-bottom: 12px;
-    position: relative;
-}
-
-.item__categoria--frutas{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 94px;
-    height: 30px;
-    border-radius: 30px;
-    padding: 1px 1px;
-    background-color: #FFE9EE;
-    font-size: 12px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    margin-left: 12px;
-    margin-top: -20px; 
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.item__categoria--bebidas{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 106px;
-    height: 30px;
-    border-radius: 30px;
-    padding: 1px 1px;
-    background-color: #FFE9EE;
-    font-size: 12px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    margin-left: 12px;
-    margin-top: -20px; 
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.item__nome{
-    width: 267px;
-    height: 27px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color: #000000;
-}
-
-.item__info{
-    margin-top: 16px;
-    width: 300px;
-    height: 48px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: normal;
-    color: #868e96;
-}
-
-.item__preco{
-    margin-top: 27px;
-    width: 53px;
-    height: 14px;
-    font-family: 'Poppin', sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    margin-right: 212px;
-}
-
-.item__botao{
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 100px;
-    background-color: #E4F7EF;
-    color: #4ACA94;
-    font-size: 9px;
-}
-
-.carrinho{
-    margin-left: 18px;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.carrinho__titulo{
-    width: 95%;
-    height: 60px;
-    background-color: #FF2253;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-bottom: 7px;
-}
-
-.carrinho__titulo p{
-    margin-left: 25px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.carrinho__titulo i{
-    font-size: 13px;
-    margin-right: 21px;
-}
-
-.carrinho__corpo--vazio{
-    width: 95%;
-    height: 433px;
-    background-color: #F8F9FA;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.carrinho__corpo--vazio img{
-    margin-top: 133px;
-    margin-bottom: 24px;
-}
-
-.carrinho__corpo--vazio h2{
-    margin-bottom: 15px;
-    font-size: 17px;
-    font-weight: bold;
-    color: #868E96;
-}
-
-.carrinho__corpo--vazio p{
-    color: #868E96;
-    font-size: 13px;
-    font-weight: 400;
-    width: 65%;
-    text-align: center;
-}
-
-.carrinho__corpo--preenchido{
-    width: 95%;   
-    height: 437px;
-    background-color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
+  .carrinhoLista__item--vinho div{
     overflow-x: hidden;
-    overflow-y: scroll;
+  }
 }
 
-.carrinhoLista{
-    margin-top: 19px;
-    width: 100%;
-}
-
-.carrinhoLista__item{
-    width: 95%;
-    height: 79px;
-    margin-bottom: 43px;
-    margin-left: 10px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.carrinhoLista__imagem figcaption{
-    display: none;
-}
-
-.carrinhoLista__imagem img{
-    width: 75px;
-    height: 75px;
-    border-radius: 9px;
-}
-
-.carrinhoLista__infos{
-    display: flex;
-    flex-direction: column;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    margin-left: 13px;
-    margin-right: 18px;
-    justify-content: space-around;
-}
-
-.carrinhoLista__nome{
-    color: #000000;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.carrinhoLista__categoria{
-    color: #868E96;
-    font-size: 10px;
-    font-weight: normal;
-}
-
-.carrinhoLista__preco{
-    color: #212529;
-    font-size: 12px;
-}
-
-.carrinhoLista__botao{
-    width: 27px;
-    height: 27px;
-    border: none;
-    border-radius: 4px;
-    background-color: #F8F9FA;
-    color: #868E96;
-}
-
-.quanti-Preco{
-    margin-bottom: 50px;
-    width: 90%;
-    margin-left: 18px;
-}
-
-.quantidade{
-   background-color: #F8F9FA; 
-   height: 58px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   font-family: 'Poppins', sans-serif;
-   font-size: 12px;
-   font-weight: bold;
-}
-
-.preco{
-    height: 58px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   font-family: 'Poppins', sans-serif;
-   font-size: 12px;
-   font-weight: bold;
+@media (min-width: 1100px) {
+  .carrinho {
+    margin-top: -50px;
+  }
 }
