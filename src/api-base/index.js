@@ -2,7 +2,6 @@ import {Template} from "./models/template.js"
 //let vitrine = document.getElementById("vitrine") //tem que ser "ul"
 
   async function getProducts () {
-      let produtos = []
       const link = 'https://kenzie-food-api.herokuapp.com/product'
       const response = await fetch(link)
         .then((res) => res.json())

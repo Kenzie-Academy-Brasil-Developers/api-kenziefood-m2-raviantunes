@@ -9,7 +9,7 @@ class Template {
 			<span class="categoria">${categoria}</span>
 			<p class="nome">${nome}</p>
 			<p class="descricao">${descricao}</p>
-			<p class="preco">R$${preco.toFixed(2)}</p>
+			<p class="preco">R$${Number(preco).toFixed(2)}</p>
 		`
 		return li
 
