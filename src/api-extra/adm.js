@@ -71,6 +71,3 @@ function pesquisa(e) {
 
 const pesquisar = document.getElementById("pesquisaID")
 pesquisar.addEventListener("click", pesquisa);
-
-
-//let carrinho = document.getElementById("carrinho") //tem que ser "ul"

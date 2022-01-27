@@ -81,7 +81,6 @@ class API {
 		console.log(newProduto)
 		this.postProducts(newProduto)
 		this.delProducts(id)
-		this.getProducts()	
 	}
 
   
