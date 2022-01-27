@@ -1,17 +1,19 @@
 export { precoCarrinho };
 
 const precoCarrinho = class precoCarrinho {
-  static precoTotalProdutos(produtos) {
-    const precoTotal = produtos.reduce((valorTotal, { preco }) => {
-      valorTotal += preco;
-      return valorTotal;
-    }, 0);
-    this.atualizaPreco(precoTotal);
-    return precoTotal;
+  static precoTotalProdutos() {
+    const precos = document.querySelectorAll(".carrinhoLista__preco")
+    let precoFinal = 0
+    precos.forEach(span => {
+      const precoProduto = span.innerText
+      precoFinal += Number(precoProduto.split("R$ ").join("").replace(",", "."))
+    })
+    
+    return this.atualizaPreco(precoFinal);
   }
 
   static atualizaPreco(preco) {
     const pPrecoTotal = document.querySelector('.preco__valor');
-    pPrecoTotal.innerText = `${preco.toFixed(2).replace('.', ',')}`;
+    pPrecoTotal.innerText = `R$ ${preco.toFixed(2).replace('.', ',')}`;
   }
 };

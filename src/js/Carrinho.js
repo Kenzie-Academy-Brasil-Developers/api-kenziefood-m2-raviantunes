@@ -1,4 +1,7 @@
 
+import { precoCarrinho } from "./PrecoCarrinho.js"
+import {quantidadeProdutos } from "./QuantidadeProdutos.js"
+
 class ControllerCarrinho{
     
 
@@ -11,8 +14,10 @@ class ControllerCarrinho{
 
         const quantiPreco = document.querySelector(".quanti-Preco")
         quantiPreco.style.display = "block"
-
+        
         ul.appendChild(produto)
+        quantidadeProdutos.quantidadeProdutosCarrinho()
+        precoCarrinho.precoTotalProdutos()
     }
 
     static removerProduto(ul, idRemover){
@@ -27,7 +32,8 @@ class ControllerCarrinho{
         }
 
         ul.removeChild(ul.children[index])
-
+        quantidadeProdutos.quantidadeProdutosCarrinho()
+        precoCarrinho.precoTotalProdutos()
         if(ul.childElementCount === 0){
             const carrinhoVazio = document.querySelector(".carrinho__corpo--vazio")
             carrinhoVazio.style.display = "flex"
