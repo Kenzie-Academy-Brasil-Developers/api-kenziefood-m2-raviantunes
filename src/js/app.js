@@ -8,21 +8,23 @@ import { filtrarProdutos } from './Filter.js';
 const botaoMostrarPanificadora = document.querySelector(
   '.filtros__button--panificadora'
 );
-botaoMostrarPanificadora.addEventListener('click', filtrarProdutos);
+botaoMostrarPanificadora.addEventListener(
+  'click',
+  filter.filtrarPorPanificadora
+);
 
 const botaoMostrarFrutas = document.querySelector('.filtros__button--frutas');
-botaoMostrarFrutas.addEventListener('click', filtrarProdutos);
+botaoMostrarFrutas.addEventListener('click', filter.filtrarPorFrutas);
 
 const botaoMostrarBebidas = document.querySelector('.filtros__button--bebidas');
-botaoMostrarBebidas.addEventListener('click', filtrarProdutos);
+botaoMostrarBebidas.addEventListener('click', filter.filtrarPorBebidas);
 
 const inputCampoBusca = document.querySelector('.pesquisa__input');
 inputCampoBusca.addEventListener('onKeyUp', () => {
   filter.filtrarPorNomeBuscado(inputCampoBusca.value);
 });
-
 const botaoCampoBusca = document.querySelector('.pesquisa__button');
-botaoCampoBusca.addEventListener('click', filtrarProdutos);
+botaoCampoBusca.addEventListener('click', filter.filtrarPorNomeBuscado);
 
 const botaoMostrarTodos = document.querySelector('.filtros__button--todos');
 botaoMostrarTodos.addEventListener('click', () => {
