@@ -1,6 +1,7 @@
 import { filter } from './Filter.js';
 import { getProduct } from '../api-base/index.js';
 import { getProducts } from '../api-base/index.js';
+import { getProductStorage } from '../api-base/index.js';
 import { ControllerCarrinho } from './Carrinho.js';
 
 const botaoMostrarPanificadora = document.querySelector(
@@ -31,6 +32,7 @@ botaoMostrarTodos.addEventListener('click', () => {
 });
 
 getProducts();
+getProductStorage()
 
 const vitrine = document.querySelector('.vitrine__lista');
 vitrine.addEventListener('click', evt => {
