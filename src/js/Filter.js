@@ -2,6 +2,10 @@ import { Template } from '../api-base/models/template.js';
 export { filter, filtrarProdutos, buscarProdutos };
 // export { filtrarProdutos };
 
+const botaoMostrarPanificadora = document.querySelector(
+  '.filtros__button--panificadora'
+);
+
 const buscarProdutos = () => {
   return fetch(`https://kenzie-food-api.herokuapp.com/product`)
     .then(response => response.json())
@@ -9,29 +13,19 @@ const buscarProdutos = () => {
     .catch(error => error);
 };
 
+let arrayProdutos;
 async function filtrarProdutos() {
-  const arrayProdutos = await buscarProdutos();
+  arrayProdutos = await buscarProdutos();
   // console.log(arrayProdutos);
-  filter.filtrarPorFrutas(arrayProdutos);
+  return arrayProdutos;
 }
 
-// async function getProducts () {
-//   let produtos = []
-//   const link = 'https://kenzie-food-api.herokuapp.com/product'
-//   const response = await fetch(link)
-//     .then((res) => res.json())
-//     .then((res) => res)
-//     .catch((error) => error);
-//     console.log(response)
-//     response.forEach((produto) => {
-//     teste.appendChild(Template.produto(produto))})
-// }
-// getProducts()
-
 const filter = class Filter {
-  static filtrarPorPanificadora(produtos) {
+  static async filtrarPorPanificadora() {
+    let produtos = await filtrarProdutos();
     const vitrine = document.querySelector('.vitrine__lista');
     vitrine.innerHTML = '';
+
     const listaPanificadora = produtos.filter(({ categoria }) => {
       return categoria === 'Panificadora';
     });
@@ -42,9 +36,11 @@ const filter = class Filter {
     return listaPanificadora;
   }
 
-  static filtrarPorFrutas(produtos) {
+  static async filtrarPorFrutas() {
+    let produtos = await filtrarProdutos();
     const vitrine = document.querySelector('.vitrine__lista');
     vitrine.innerHTML = '';
+
     const listaFrutas = produtos.filter(({ categoria }) => {
       return categoria === 'Frutas';
     });
@@ -56,7 +52,8 @@ const filter = class Filter {
     return listaFrutas;
   }
 
-  static filtrarPorBebidas(produtos) {
+  static async filtrarPorBebidas() {
+    let produtos = await filtrarProdutos();
     const vitrine = document.querySelector('.vitrine__lista');
     vitrine.innerHTML = '';
     const listaBebidas = produtos.filter(({ categoria }) => {
@@ -69,21 +66,18 @@ const filter = class Filter {
     return listaBebidas;
   }
 
-  static filtrarPorNomeBuscado(produtos) {
-    let nomeProdutoDigitado = document.querySelector('.pesquisa__input');
+  static async filtrarPorNomeBuscado() {
+    let nomeProdutoDigitado = document.querySelector('.pesquisa__input').value;
     nomeProdutoDigitado = nomeProdutoDigitado.toLowerCase();
 
+    const produtos = await filtrarProdutos();
     const vitrine = document.querySelector('.vitrine__lista');
     vitrine.innerHTML = '';
-    const listaCampoBusca = produtos.filter(({ nome, categoria }) => {
+    const listaCampoBusca = produtos.filter(({ nome }) => {
       return nome.toLowerCase() === nomeProdutoDigitado;
-
-      // else if (categoria.toLowerCase() === nomeProdutoDigitado) {
-      //   return categoria.toLowerCase() === nomeProdutoDigitado;
-      // }
     });
 
-    listaBebidas.forEach(item => {
+    listaCampoBusca.forEach(item => {
       vitrine.appendChild(Template.produto(item));
     });
 
