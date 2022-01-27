@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lato:wght@100;300&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0082ba51d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Kenzie Food - E-commerce</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <section class="cabecalho__header">
+        <div class="cabecalho__logo">
+          <figure class="cabecalho__logo--imagem">
+            <img src="./src/img/logo/logo.png" alt="Logo Kenzie Food" />
+            <figcaption>Logo Kenzie Food</figcaption>
+          </figure>
+          <h1 class="cabecalho__logo--titulo">
+            Kenzie <span class="cabecalho__logo--titulo-span">Food</span>
+          </h1>
+        </div>
+
+        <div class="pesquisa">
+          <input
+            type="text"
+            name="pesquisarProduto"
+            class="pesquisa__input"
+            id="pesquisarProduto"
+            placeholder="Pesquisar por produto"
+          />
+          <button class="pesquisa__button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </section>
+
+      <nav id="filtros" class="filtros">
+        <button class="filtros__button--todos">Todos</button>
+        <button class="filtros__button--panificadora">
+          <img src="./src/img/filtros/Icon_bread.png" alt="Ícone de um pão" />
+          Panificadora
+        </button>
+        <button class="filtros__button--frutas">
+          <img
+            src="./src/img/filtros/Icon_fruits.png"
+            alt="Ícone de frutas"
+          />Frutas
+        </button>
+        <button class="filtros__button--bebidas">
+          <img
+            src="./src/img/filtros/Icon_glass of wine.png"
+            alt="Ícone de uma taça de vinho"
+          />Bebidas
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="vitrine">
+        <ul class="vitrine__lista"></ul>
+      </section>
+
+      <section class="carrinho-quantidade-total">
+        <section class="carrinho">
+          <div class="carrinho__titulo">
+            <p class="carrinhoTitulo">
+              <i class="fas fa-cart-arrow-down"></i> Carrinho
+            </p>
+          </div>
+
+          <div class="carrinho__corpo--vazio">
+            <img
+              src="./src/img/logoCarrinho/shopping-bag.png"
+              alt="Bolsa de compra"
+            />
+            <h2>Ops!</h2>
+            <p>Por enquanto não temos produtos no carrinho</p>
+          </div>
+
+          <div class="carrinho__corpo--preenchido">
+            <ul class="carrinhoLista"></ul>
+          </div>
+        </section>
+
+        <section class="quanti-Preco">
+          <div class="quantidade">
+            <span class="quantidade__texto">Quantidade</span>
+            <span class="quantidade__valor"></span>
+          </div>
+
+          <div class="preco">
+            <span class="preco__texto">Total</span>
+            <span class="preco__valor"></span>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./src/js/app-extra.js"></script>
+  </body>
+</html>

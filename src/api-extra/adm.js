@@ -1,7 +1,9 @@
-import {Template} from "../api-base/models/template.js"
-import {NewProduct} from "./newProduct.js"
-import {API} from "./api.js"
-const cadastrar = (e) => {
+import { NewProduct } from "./newProduct.js"
+import { API } from "./api.js"
+
+API.getProductsExtra()
+
+async function cadastrar(e) {
     e.preventDefault();
     const nome = document.getElementById("cadnome").value
     if(typeof nome !== "string"){
@@ -16,14 +18,14 @@ const cadastrar = (e) => {
       console.log("Descrição precisa ser uma string")}
     const imagem = document.getElementById("cadimagem").value
     let data = new NewProduct(nome, preco, categoria, descricao, imagem)
-  API.postProducts(data)
+  await API.postProducts(data)
+  API.getProductsExtra()
 };
 const incluir = document.getElementById("incluir")
 incluir.addEventListener("click", cadastrar);
 
-const alterar = (e) => {
+async function alterar(e) {
   e.preventDefault();
-
   const nome = document.getElementById("altnome").value
   const preco = document.getElementById("altpreco").value
   const categoria = document.getElementById("altcategoria").value
@@ -46,25 +48,25 @@ const alterar = (e) => {
   if(imagem != ""){
     data.imagem = imagem
   }
-API.patchProducts(id, {"nome": data.nome, "preco": data.preco, "categoria": data.categoria, "descricao": data.descricao, "imagem": data.imagem})
+ await API.patchProducts(id, {"nome": data.nome, "preco": data.preco, "categoria": data.categoria, "descricao": data.descricao, "imagem": data.imagem})
+ API.getProductsExtra()
 };
 const modificar = document.getElementById("modificar")
 modificar.addEventListener("click", alterar);
 
-const deletar = (e) => {
+async function deletar(e) {
     e.preventDefault();
     const id = document.getElementById("id").value
-    API.delProducts(id)
-    API.getProducts()
+    await API.delProducts(id)
+    API.getProductsExtra()
 }
-API.getProducts()
 const apagar = document.getElementById("apagar")
 apagar.addEventListener("click", deletar);
 
-const pesquisa = (e) => {
+function pesquisa(e) {
   e.preventDefault();
   const idsearch = document.getElementById("idsearch").value
-  API.getProduct(idsearch)
+  API.getProductExtra(idsearch)
 }
 
 const pesquisar = document.getElementById("pesquisaID")
