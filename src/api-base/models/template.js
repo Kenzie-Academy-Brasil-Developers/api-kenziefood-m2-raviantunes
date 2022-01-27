@@ -72,7 +72,13 @@ class Template {
   }) {
     const li = document.createElement('li');
     li.id = id;
-    li.classList.add('carrinhoLista__item');
+	if(id !== 5){
+		li.classList.add('carrinhoLista__item');
+	} else{
+		li.classList.add('carrinhoLista__item');
+		li.classList.add('carrinhoLista__item--vinho');
+	}
+    
     li.innerHTML = `
 		<figure class="carrinhoLista__imagem">
 		  <img  src="${imagem}"  alt="${nome}"/>
