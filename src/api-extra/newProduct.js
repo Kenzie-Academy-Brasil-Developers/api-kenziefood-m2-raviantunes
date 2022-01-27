@@ -5,6 +5,7 @@ class NewProduct {
 		this.categoria = categoria
 		this.descricao = descricao
 		this.imagem = imagem
+
 	}
 }
 
