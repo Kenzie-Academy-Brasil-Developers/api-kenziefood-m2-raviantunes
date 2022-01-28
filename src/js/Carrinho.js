@@ -15,6 +15,7 @@ class ControllerCarrinho{
         const quantiPreco = document.querySelector(".quanti-Preco")
         quantiPreco.style.display = "block"
         
+        
         ul.appendChild(produto)
         quantidadeProdutos.quantidadeProdutosCarrinho()
         precoCarrinho.precoTotalProdutos()
@@ -31,6 +32,13 @@ class ControllerCarrinho{
             }
         }
 
+        const arrayProd = localStorage.getItem("Ids").split(",")
+        const indexStorage = arrayProd.findIndex((number) => {
+            return number == idRemover
+        })
+        arrayProd.splice(indexStorage, 1)
+        localStorage.setItem("Ids", arrayProd)
+
         ul.removeChild(ul.children[index])
         quantidadeProdutos.quantidadeProdutosCarrinho()
         precoCarrinho.precoTotalProdutos()
@@ -41,7 +49,10 @@ class ControllerCarrinho{
             carrinhoPreenchido.style.display = "none"
             const quantiPreco = document.querySelector(".quanti-Preco")
             quantiPreco.style.display = "none"
+            localStorage.removeItem("Ids")
         }  
+
+       
     }
 }
 
